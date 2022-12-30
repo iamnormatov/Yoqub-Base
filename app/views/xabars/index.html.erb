@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Xabars</h1>
+
+<div id="xabars">
+  <% @xabars.each do |xabar| %>
+    <%= render xabar %>
+    <p>
+      <%= link_to "Show this xabar", xabar %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New xabar", new_xabar_path %>
+<%#  %>
