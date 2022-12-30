@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Biriktirs</h1>
+
+<div id="biriktirs">
+  <% @biriktirs.each do |biriktir| %>
+    <%= render biriktir %>
+    <p>
+      <%= link_to "Show this biriktir", biriktir %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New biriktir", new_biriktir_path %>
+<%#  %>
