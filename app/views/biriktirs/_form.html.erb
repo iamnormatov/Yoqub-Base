@@ -1,0 +1,29 @@
+<%= form_with(model: biriktir) do |form| %>
+  <% if biriktir.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(biriktir.errors.count, "error") %> prohibited this biriktir from being saved:</h2>
+
+      <ul>
+        <% biriktir.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    <br>
+  <div class="input-group mb-3">
+    <%= form.file_field :biriktirma, class: "form-control" %>
+    
+  <label class="input-group-text" for="inputGroupFile02"><%= form.submit%></label>
+</div>
+    <%#  %>
+  </div>
+
+  <div>
+    <%= form.text_field :project_id, type: :hidden %>
+  </div>
+
+  <div>
+    
+  </div>
+<% end %>
