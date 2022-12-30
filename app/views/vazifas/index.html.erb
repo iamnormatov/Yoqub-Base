@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Vazifas</h1>
+
+<div id="vazifas">
+  <% @vazifas.each do |vazifa| %>
+    <%= render vazifa %>
+    <p>
+      <%= link_to "Show this vazifa", vazifa %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New vazifa", new_vazifa_path %>
+<%#  %>
