@@ -1,0 +1,20 @@
+<br><br>
+<%= render @xabar %>
+<br>
+<div>
+  <%= link_to "Edit this xabar", edit_xabar_path(@xabar), class:"btn btn-light", style: "margin-top: -5px" %> <br>
+  <%= button_to "Destroy this xabar", @xabar, method: :delete, class:"btn btn-light", style: "margin-top: 5px"%>
+  <%= link_to "Back to xabars", new_project_xabar_path(@project), class:"btn btn-light", style: "margin-top: 5px" %> <br> 
+</div>
+<br><br>
+
+
+
+<%= render 'xabardors/form', xabardor: @xabardor %>
+<br>
+<% @xabardors.each do |xabardor| %>
+<%= xabardor.ism %>
+  <%= link_to "Edit", edit_xabar_xabardor_path(@xabar, xabardor) %>
+   <%= button_to "Destroy", [@xabar, xabardor], method: :delete, class: "btn btn-light", style: "margin-top: 10px" %>
+<% end %>
+<%#  %>
