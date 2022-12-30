@@ -1,0 +1,12 @@
+  <div class="card" style="width: 40rem; margin: auto; background: none">
+  <div class="card-body">
+    <h1 align="center">New xabar</h5>
+      <%= form.text_field :ism, class: "form-control", placeholder: "Ism" , style: "background: none " %>
+        <br>
+      <%= form.text_area :tavsiv, class: "form-control", placeholder: "Tavsiv", style: "background: none;"                                                  %>
+        <br>
+      <%= form.number_field :user_id, id: :project_user_id, value: current_user.id, type: :hidden%>
+      <%= form.submit class: "btn btn-secondary", style: " background: none" %>
+      <%= link_to "Back to projects", projects_path, class: "btn btn-secondary", style: "margin-left: 345px; background: none"%>
+  </div>
+</div>
