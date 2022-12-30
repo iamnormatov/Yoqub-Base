@@ -1,0 +1,13 @@
+<br><br>
+<%= render "form", xabar: @xabar %>
+
+<br>
+
+<div id="xabars">
+  <% @xabars.each do |xabar| %>
+    <%= render xabar %>
+      <li class="list-group-item", style="background: none; border-color: white "><%= link_to "Show this xabar", xabar, style: "color: black" %>
+    <br> 
+  <% end %>
+</div>
+<%#  %>
