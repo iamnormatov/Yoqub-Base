@@ -1,0 +1,22 @@
+<h1>New biriktir</h1>
+
+<%= render "form", biriktir: @biriktir %>
+
+<br>
+
+<div>
+</div>
+<%#  %>
+
+
+<div id="biriktirs">
+  <% @biriktirs.each do |biriktir| %>
+    <% if biriktir.biriktirma.attached? %>
+    <%= biriktir.biriktirma.filename %><%= link_to "Download",  rails_blob_path(biriktir.biriktirma, disposition: "attachment") %>
+<% end %>
+    <p>
+      <%= button_to "Destroy this biriktir",[@project, biriktir], method: :delete, class: "btn btn-light" %>
+    </p>
+  <% end %>
+</div>
+  <%= link_to "Back", project_path(@project), class: "btn btn-light" %>
