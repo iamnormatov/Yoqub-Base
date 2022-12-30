@@ -1,0 +1,31 @@
+<%= form_with(model: xabardor) do |form| %>
+  <% if xabardor.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(xabardor.errors.count, "error") %> prohibited this xabardor from being saved:</h2>
+
+      <ul>
+        <% xabardor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%#  %>
+  <div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="inputPassword6" class="col-form-label"><%= form.label :ism, style: "display: block" %></label>
+  </div>
+  <div class="col-auto">
+    <%= form.text_field :ism, class: "form-control" %>
+  </div>
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+      <%= form.text_field :xabar_id, value: @xabar.id, type: :hidden, style: "display: block", class: "form-text" %>
+    </span>
+  </div>
+</div>
+
+  <div>
+    <%= form.submit class: "btn btn-warning", style: "margin-top: 5px; margin-left: 40px" %>
+  </div>
+<% end %>
