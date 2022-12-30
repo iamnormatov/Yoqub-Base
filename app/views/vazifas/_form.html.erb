@@ -1,0 +1,29 @@
+<%= form_with(model: vazifa) do |form| %>
+  <% if vazifa.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(vazifa.errors.count, "error") %> prohibited this vazifa from being saved:</h2>
+
+      <ul>
+        <% vazifa.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="row mb-3">
+<form class="row g-3">
+  <div class="col-auto">
+    <%= form.label :ism, style: "display: block" %> 
+    <%= form.text_field :project_id, type: :hidden %>
+  </div>
+  <div class="col-auto">
+    <%= form.text_field :ism, class: "form-control" %>
+  </div>
+  <div class="col-auto">
+    <%= form.submit class: "btn btn-warning mb-3" %>
+  </div>
+</form>
+</div>
+
+<% end %>
+<%#  %>
