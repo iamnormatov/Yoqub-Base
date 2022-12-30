@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @vazifa %>
+
+<div>
+  <%= link_to "Edit this vazifa", edit_vazifa_path(@vazifa) %> |
+  <%= link_to "Back to vazifas", vazifas_path %>
+
+  <%= button_to "Destroy this vazifa", @vazifa, method: :delete %>
+</div>
+<%#  %>
