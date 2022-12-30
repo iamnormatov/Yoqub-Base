@@ -1,0 +1,27 @@
+<br>
+<%= link_to "New Project", new_project_path, class:"btn btn-warning", style: "margin-left: 1400px" %>
+<br>
+<br>
+<div class="row">
+
+<br>
+<br>
+<h2 align="center">Projects</h2>
+<br><br><br>
+<br>
+  <% @projects.each do |project| %>
+  <% if project.user.id == current_user.id %>
+    <%#  %>
+  
+<div class="card" style="width: 18rem; background: none">
+
+  <div class="card-body">
+    <h5 class="card-title"><%= project.title %></h5>
+    <p class="card-text"><%= project.body %></p>
+    <a href="#" ><%= link_to "Show Project", project, class:"btn btn-secondary", style: "background: none" %></a>
+  </div>
+</div>
+<% end %>
+  <% end %>
+</div>
+
