@@ -1,0 +1,23 @@
+<h1>New vazifa</h1>
+<br>
+<%= render "form", vazifa: @vazifa %>
+
+
+  <%= link_to "Back", project_path(@project), class: "btn btn-light", style: "margin-top: -45px; margin-left: 50px" %>
+
+<br><br>
+
+<div id="vazifas">
+  <% if @vazifas.count > 0 %>
+  <% @vazifas.each do |vazifa| %>
+    <%= vazifa.ism %>
+  <% if vazifa.ism %>
+  <a href="/projects/<%= @project %>/vazifas/<%= vazifa.id %>/edit">Edit</a>
+  <br>
+  <%= button_to "Destroy", [vazifa.project,vazifa], method: :delete, class: "btn btn-light", style: "margin-top: 11px" %>
+  <br>
+  <% end %>
+  <% end %>
+  <% end %>
+</div>
+<%#  %>
