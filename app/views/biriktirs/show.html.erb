@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @biriktir %>
+<%#  %>
+<div>
+  <%= link_to "Edit this biriktir", edit_biriktir_path(@biriktir) %> |
+  <%= link_to "Back to biriktirs", biriktirs_path %>
+
+  <%= button_to "Destroy this biriktir", @biriktir, method: :delete %>
+</div>
