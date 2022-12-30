@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Xabardors</h1>
+
+<div id="xabardors">
+  <% @xabardors.each do |xabardor| %>
+    <%= render xabardor %>
+    <p>
+      <%= link_to "Show this xabardor", xabardor %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New xabardor", new_xabardor_path %>
+<%#  %>
