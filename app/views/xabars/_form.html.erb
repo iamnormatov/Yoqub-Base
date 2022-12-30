@@ -1,0 +1,28 @@
+<%= form_with(model: xabar) do |form| %>
+  <% if xabar.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(xabar.errors.count, "error") %> prohibited this xabar from being saved:</h2>
+
+      <ul>
+        <% xabar.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="card" style="width: 25rem; margin: auto; background: none">
+  <div class="card-body">
+    <h1 align="center">New xabar</h5>
+      <%= form.text_field :ism, class: "form-control", placeholder: "Ism" , style: "background: none " %>
+        <br>
+      <%= form.text_area :tavsiv, class: "form-control", placeholder: "Tavsiv", style: "background: none;"                                                  %>
+        <br>
+      <%= form.text_field :project_id, type: :hidden %>
+      <%= form.submit class: "btn btn-secondary", style: "margin-left: 50px; background: none" %>
+      <%= link_to "Back to projects", projects_path, class: "btn btn-secondary", style: "background: none"%>
+  </div>
+</div>
+
+<% end %>
+<%#  %>
